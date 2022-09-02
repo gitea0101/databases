@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
+    "scrollTop": -66.39999999999996,
     "scrollLeft": -0.8,
-    "zoomLevel": 1,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -116,7 +116,7 @@
             "id": "a3b61700-3763-4e72-9d2e-e7aa1d56baea"
           },
           {
-            "name": "ADRESS",
+            "name": "ADDRESS",
             "comment": "주소",
             "dataType": "VARCHAR(200)",
             "default": "",
@@ -166,7 +166,7 @@
           "active": false,
           "left": 63.2,
           "top": 92.8,
-          "zIndex": 58,
+          "zIndex": 32,
           "widthName": 64.20703125,
           "widthComment": 71.5703125
         },
@@ -222,9 +222,48 @@
               "widthDefault": 60
             },
             "id": "f2d6d7cc-633b-4d6f-8ebc-6a655f25e130"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 504.1341,
+          "top": 108.6659,
+          "zIndex": 43,
+          "widthName": 82.970703125,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "3903ff6d-3e81-4061-ae70-8518c66aef28"
+      },
+      {
+        "name": "COMPANY_DEPT",
+        "comment": "관계 테이블",
+        "columns": [
+          {
+            "name": "COMPANY_ID",
+            "comment": "unique id",
+            "dataType": "VARCHAR(200)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 82.5771484375,
+              "widthComment": 60,
+              "widthDataType": 89.29296875,
+              "widthDefault": 60
+            },
+            "id": "4004836f-72a5-404f-ba48-0a7a1d82d6dd"
           },
           {
-            "name": "EMP_ID",
+            "name": "DEPT_ID",
             "comment": "unique id",
             "dataType": "VARCHAR(200)",
             "default": "",
@@ -244,19 +283,19 @@
               "widthDataType": 89.29296875,
               "widthDefault": 60
             },
-            "id": "dc2889ce-d4cc-4a2a-a786-12cab4434128"
+            "id": "e05123e2-28b1-463b-8b1b-5c92a77f6e88"
           }
         ],
         "ui": {
           "active": false,
-          "left": 610.8,
-          "top": 106,
-          "zIndex": 59,
-          "widthName": 82.970703125,
-          "widthComment": 60
+          "left": 407.3775,
+          "top": 389.867,
+          "zIndex": 45,
+          "widthName": 100.1474609375,
+          "widthComment": 71.5703125
         },
         "visible": true,
-        "id": "3903ff6d-3e81-4061-ae70-8518c66aef28"
+        "id": "f125347f-ad98-45ab-9374-700205de8967"
       }
     ],
     "indexes": []
@@ -275,22 +314,48 @@
           "columnIds": [
             "0563fd8e-c2f9-47a1-9b2d-c2afd53d86d6"
           ],
-          "x": 439.49296875,
-          "y": 178.55,
-          "direction": "right"
+          "x": 251.346484375,
+          "y": 264.3,
+          "direction": "bottom"
         },
         "end": {
-          "tableId": "3903ff6d-3e81-4061-ae70-8518c66aef28",
+          "tableId": "f125347f-ad98-45ab-9374-700205de8967",
           "columnIds": [
-            "dc2889ce-d4cc-4a2a-a786-12cab4434128"
+            "4004836f-72a5-404f-ba48-0a7a1d82d6dd"
           ],
-          "x": 610.8,
-          "y": 171.25,
+          "x": 407.3775,
+          "y": 444.867,
           "direction": "left"
         },
-        "constraintName": "fk_company_to_department",
+        "constraintName": "fk_company_to_company_dept",
         "visible": true,
-        "id": "1f9c8e5a-80bc-4d44-850b-fb2c1747cd7c"
+        "id": "a42e6157-9693-42c7-9064-cc476acc6b4b"
+      },
+      {
+        "identification": false,
+        "relationshipType": "ZeroN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "3903ff6d-3e81-4061-ae70-8518c66aef28",
+          "columnIds": [
+            "c243ffe8-0dc4-426f-8bb1-7a3de64e31cb"
+          ],
+          "x": 692.280584375,
+          "y": 218.6659,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "f125347f-ad98-45ab-9374-700205de8967",
+          "columnIds": [
+            "e05123e2-28b1-463b-8b1b-5c92a77f6e88"
+          ],
+          "x": 606.81255859375,
+          "y": 389.867,
+          "direction": "top"
+        },
+        "constraintName": "fk_department_to_company_dept",
+        "visible": true,
+        "id": "c617642c-24b3-43f7-8062-6cd01f01101a"
       }
     ]
   }
