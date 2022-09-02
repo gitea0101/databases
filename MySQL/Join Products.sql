@@ -8,10 +8,10 @@ FROM (
                 (Orders INNER JOIN Customers 
                 ON Orders.CustomerID = Customers.CustomerID
                 ) INNER JOIN Shippers 
-            ON Orders.ShipperID = Shippers.ShipperID
+                ON Orders.ShipperID = Shippers.ShipperID
             ) INNER JOIN OrderDetails
-        ON Orders.OrderID = OrderDetails.OrderID
+            ON Orders.OrderID = OrderDetails.OrderID
         ) INNER JOIN Products
-    ON OrderDetails.ProductID = Products.ProductID
+        ON OrderDetails.ProductID = Products.ProductID
     )
 ;
