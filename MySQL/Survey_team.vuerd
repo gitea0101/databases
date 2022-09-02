@@ -4,7 +4,7 @@
     "width": 2000,
     "height": 2000,
     "scrollTop": -210.40000000000046,
-    "scrollLeft": -250.4,
+    "scrollLeft": -218.39999999999998,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -44,7 +44,7 @@
     "tables": [
       {
         "name": "QNumber",
-        "comment": "문항인수",
+        "comment": "질문항",
         "columns": [
           {
             "name": "Qnum",
@@ -95,9 +95,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 81.9559,
-          "top": 202.7556,
-          "zIndex": 45,
+          "left": 80.9559,
+          "top": 203.7556,
+          "zIndex": 13,
           "widthName": 60.31591796875,
           "widthComment": 60
         },
@@ -106,7 +106,7 @@
       },
       {
         "name": "Answer",
-        "comment": "답항",
+        "comment": "답변항",
         "columns": [
           {
             "name": "Anum",
@@ -159,7 +159,7 @@
           "active": false,
           "left": 1057.3337,
           "top": 248.1111,
-          "zIndex": 49,
+          "zIndex": 8,
           "widthName": 60,
           "widthComment": 60
         },
@@ -244,7 +244,7 @@
           "active": false,
           "left": 582.6,
           "top": 203.622,
-          "zIndex": 52,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60
         },
@@ -306,7 +306,7 @@
           "active": false,
           "left": 59,
           "top": 418.2,
-          "zIndex": 58,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 60
         },
@@ -368,7 +368,7 @@
           "active": false,
           "left": 591,
           "top": 471.4,
-          "zIndex": 28,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 60
         },
@@ -392,8 +392,8 @@
           "columnIds": [
             "898f170f-e25c-4cc9-8320-3750f105dafc"
           ],
-          "x": 458.24886875,
-          "y": 257.75559999999996,
+          "x": 457.24886875,
+          "y": 258.75559999999996,
           "direction": "right"
         },
         "end": {
