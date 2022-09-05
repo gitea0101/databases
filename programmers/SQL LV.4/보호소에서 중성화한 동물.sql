@@ -1,0 +1,23 @@
+-- https://school.programmers.co.kr/learn/courses/30/lessons/59045
+-- 보호소에 들어올 당시에는 중성화되지 않았지만, 보호소를 나갈 당시에는 중성화된 동물의 아이디와 생물 종, 이름을 조회하는 아이디 순으로 조회하는 SQL 문
+/*
+SELECT ANIMAL_INS.ANIMAL_ID
+    , ANIMAL_INS.ANIMAL_TYPE
+    , ANIMAL_INS.NAME
+FROM
+    ANIMAL_INS INNER JOIN ANIMAL_OUTS
+    ON ANIMAL_INS.ANIMAL_ID = ANIMAL_OUTS.ANIMAL_ID
+        AND (ANIMAL_INS.SEX_UPON_INTAKE LIKE ('%Intact%')
+        = (ANIMAL_OUTS.SEX_UPON_OUTCOME LIKE ('%Neutered%') 
+            OR ANIMAL_OUTS.SEX_UPON_OUTCOME LIKE ('%Spayed%')))
+;*/
+
+SELECT ANIMAL_INS.ANIMAL_ID
+    , ANIMAL_INS.ANIMAL_TYPE
+    , ANIMAL_INS.NAME
+FROM
+    ANIMAL_INS INNER JOIN ANIMAL_OUTS
+    ON ANIMAL_INS.ANIMAL_ID = ANIMAL_OUTS.ANIMAL_ID and
+    ANIMAL_INS.SEX_UPON_INTAKE LIKE ('%Intact%') and
+    (ANIMAL_OUTS.SEX_UPON_OUTCOME) NOT LIKE ('%Intact%');
+;
